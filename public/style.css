@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+/*header*/
+header {
+    background-color: #A67C87;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 0 0 30px 30px;
+    color: #F2DCE0;
+    
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+#search{
+    background-color: #F2DCE0;
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+}
+header h3:hover {
+    background-color: #F2C4D0;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #594246;
+    width: 180px;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+/*main*/
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 5px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens no container */
+    justify-items: center; /* Garante que os itens do grid sejam centralizados */
+    
+    
+    padding: 20px;
+}
+main img {
+    width: 250px; /* Isso mantém a proporção da imagem */
+    height: 330px; /* Restringe a altura da imagem para se ajustar ao card */
+    border-radius: 10px;
+    padding: 2px;
+
+}
+.movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #a67c874f;
+    color: #594246;
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    margin: 15px;
+}
+
+/*footer*/
+footer {
+    background-color: #594246;
+    color: #f2c4d0d3;
+    font-size: 20px;
+    text-align: center;
+    height: 84px;
+    display: flex; /* Habilita o uso de flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; 
+    border-radius: 30px 30px 0px 0px;
+}
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
