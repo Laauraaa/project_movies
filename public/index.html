@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Acervo 2000s</title>
+    <link rel="stylesheet" href="modal.css">
+    <title>acervo filmes 2000's</title>
 </head>
 <body>
     <header>
+        <h2>acervo filmes 2000's</h2>
         <h3>tudo</h3>
         <h3>comédia</h3>
         <h3>drama</h3>
@@ -65,15 +67,34 @@
         </div>
 
         <div class="movie" id="addMovie">
-            <button type="button">+</button>
+            <button type="button" id="openModal">+</button>
             <h3>Adiocionar Filme</h3>
         </div>
-    </main>
+    </main> 
+
+    <dialog>
+        <div class="headerModal">
+            <h1>Adicionar filme</h1>
+            <button type="button" id="closeModal">x</button>
+        </div>
+
+        <div class="getmovie">
+            <input type="text" name="" id="getnamemovie" placeholder="Nome do filme">
+            <input type="file" id="imageInput" accept="image/*">
+        </div>
+        
+        <div class="coment"> 
+            <h5>Adicionar um comentário ao filme</h5>
+            <input type="text" name="" id="getNameComent" placeholder="Nome">
+            <textarea id="getComentTxt" placeholder="Digite o comentário aqui"></textarea>
+        </div>
+
+    </dialog>
 
     <footer>
-        <h5>projeto desenvolvido por <a href="https://www.linkedin.com/in/laura-messias-a46341217/">Laura Messias</a></h5>
+        <h5>projeto desenvolvido por <a href="https://www.linkedin.com/in/laura-messias-a46341217/" target="_blank">Laura Messias</a></h5>
     </footer>
 
-
+    <script src="../src/modal.js"></script>
 </body>
 </html>
