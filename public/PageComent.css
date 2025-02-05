@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -9,8 +7,7 @@
     width: 100%;
     height: 100%;
   }
-/*header*/
-header {
+  header {
     top: 0;
     left: 0;
     width: 100%; /* Faz o menu ocupar toda a largura */
@@ -47,58 +44,89 @@ header h3:hover {
     box-shadow: 5px 5px 20px #594246a0;
   }
 
-/*main*/
 
-main {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
-    gap: 5px; /* Espaçamento entre os itens */
-    justify-content: center; /* Centraliza os itens no container */
-    justify-items: center; /* Garante que os itens do grid sejam centralizados */
+main{
     
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
     margin-top: 60px;
-    padding: 20px;
+    padding: 30px;
 }
-main img {
-    width: 250px; /* Isso mantém a proporção da imagem */
-    height: 330px; /* Restringe a altura da imagem para se ajustar ao card */
+#moviePosterArea{
+    width: 350px; 
+    height: 430px;
     border-radius: 10px;
-    padding: 2px;
-    margin-bottom: 5px;
+}
+.posterArea{
+
+        position: sticky;
+        top: 100px; /* Ajuste para a altura desejada */
 
 }
-.movie {
+.posterArea h3 {
+    text-align: center;
+    color: #594246;
+    margin-top: 15px;
+}
+
+.TitlePageComent {
+    color: #594246;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.comentArea{
+    
+   
+}
+.addComent{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #a67c874f;
-    color: #594246;
-    border-radius: 10px;
-    width: 300px;
-    height: 400px;
-    margin: 15px;
 }
 
-#addMovie button {
+#getNameComent{
     border: none;
-    width: 100px;
+    border-radius: 5px;
+    background-color: #59424656;
+    color: #fff;
+    font-size: 15px;
+    width: 200px;
+    height: 30px;
+}
+#getComentTxt{
+    border: none;
+    border-radius: 5px;
+    background-color: #5942461d;
+    font-size: 15px;
     height: 100px;
-    margin-bottom: 10px;
+    width: 600px;
+    margin-bottom: 30px;
+
+}
+
+#getNameComent, #getComentTxt{
+    padding: 10px;
+}
+.areaComentMovie{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    pa
+}
+.comentMovie{
+    background-color: #A67C87;
     border-radius: 10px;
-    font-size: 80px;
-    background-color: #a67c8779;
-    color: #594246;
-    cursor: pointer;
-
-}
-#addMovie button:hover{
-    box-shadow: 5px 5px 20px #594246a0;
 }
 
-/*footer*/
 footer {
+    position: fixed;
+    width: 100%; /* Faz o menu ocupar toda a largura */
+    z-index: 1000;
+    bottom: 0;
+
     background-color: #594246;
     color: #f2c4d0d3;
     font-size: 20px;
