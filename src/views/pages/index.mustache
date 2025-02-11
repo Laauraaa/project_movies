@@ -1,0 +1,37 @@
+{{>partials/header}}
+<main>
+        <div class="movie">
+            <img src="movies/images/de_repente_30.jpg" alt="" class="poster">
+            <h3>Título</h3>
+            <h4><a href="/comment" >comentários: X</a></h4>
+        </div>
+
+        
+
+        <div class="movie" id="addMovie">
+            <button type="button" id="openModal">+</button>
+            <h3>Adiocionar Filme</h3>
+        </div>
+    </main> 
+
+    <dialog>
+        <div class="headerModal">
+            <h1>Adicionar filme</h1>
+            <button type="button" id="closeModal">x</button>
+        </div>
+
+        <div class="getmovie">
+            <input type="text" name="" id="getnamemovie" placeholder="Nome do filme">
+            <input type="file" id="imageInput" accept="image/*">
+        </div>
+        
+        <div class="coment"> 
+            <h5>Adicionar um comentário ao filme</h5>
+            <input type="text" name="" id="getNameComent" placeholder="Nome">
+            <textarea id="getComentTxt" placeholder="Digite o comentário aqui"></textarea>
+            <input type="button" value="Enviar" id="sendComment">
+        </div>
+
+    </dialog>
+
+{{>partials/footer}}

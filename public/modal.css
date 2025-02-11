@@ -89,3 +89,7 @@ dialog::backdrop{
     padding: 5px;
     cursor: pointer;
 }
+
+dialog[open] {
+    display: block;
+}

@@ -29,14 +29,20 @@ header {
 }
 header h2, h3 {
     font-size: 20px;
+    
 } 
+header a {
+    text-decoration: none;
+    color: #F2DCE0;
+}
+
 #search{
     background-color: #F2DCE0;
     padding: 2px;
     border: none;
     border-radius: 5px;
 }
-header h3:hover {
+header a:hover {
     background-color: #F2C4D0;
     padding-right: 10px;
     padding-left: 10px;
@@ -104,6 +110,11 @@ main a {
 
 /*footer*/
 footer {
+    position: fixed;
+    width: 100%; /* Faz o menu ocupar toda a largura */
+    z-index: 1000;
+    bottom: 0;
+
     background-color: #594246;
     color: #f2c4d0d3;
     font-size: 20px;
