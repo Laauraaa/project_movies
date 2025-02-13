@@ -16,7 +16,7 @@ const data: Movie[] = [
     {
         type: ['romance'],
         name: 'Quatro Amigas e um Jeans Viajante',
-        image: 'public/movies/images/4_amigas_jeans_viajante.jpg',
+        image: '/movies/images/4_amigas_jeans_viajante.jpg',
         comment: [
             {
               name: "Alice",
@@ -32,141 +32,154 @@ const data: Movie[] = [
     {
         type: ['comedy'],
         name: '17 Outra Vez',
-        image: 'public/movies/images/17_Again.jpg',
+        image: '/movies/images/17_Again.jpg',
         comment: []
     },
 
     {
         type: ['romance'],
         name: 'Brilho Eterno de uma Mente sem Lembranças',
-        image: 'public/movies/images/brilho_eterno.jpg',
+        image: '/movies/images/brilho_eterno.jpg',
         comment: []
     },
 
     {
         type: ['romance', 'comedy'],
         name: 'Como Perder um Homem em 10 Dias',
-        image: 'public/movies/images/como_perder_um_homem_em_10_dias.jpg',
+        image: '/movies/images/como_perder_um_homem_em_10_dias.jpg',
         comment: []
     },
 
     {
         type: ['romance', 'comedy'],
         name: 'Como Se Fosse a Primeira Vez',
-        image: 'public/movies/images/como_se_fosse_a_primeira_vez.jpg',
+        image: '/movies/images/como_se_fosse_a_primeira_vez.jpg',
         comment: []
     },
 
     {
         type: ['romance', 'comedy'],
         name: 'De Repente 30',
-        image: 'public/movies/images/de_repente_30.jpg',
+        image: '/movies/images/de_repente_30.jpg',
         comment: []
     }, 
 
     {
         type: ['romance', 'comedy'],
         name: 'Diário de uma Paixão',
-        image: 'public/movies/images/diario_de_uma_paixao.jpg',
+        image: '/movies/images/diario_de_uma_paixao.jpg',
         comment: []
     }, 
 
     {
         type: ['comedy'],
         name: 'O Diário da Princesa',
-        image: 'public/movies/images/diario_de_uma_princesa.jpg',
+        image: '/movies/images/diario_de_uma_princesa.jpg',
         comment: []
     }, 
 
     {
         type: ['comedy'],
         name: 'Encantada',
-        image: 'public/movies/images/encantada.jpg',
+        image: '/movies/images/encantada.jpg',
         comment: []
     }, 
 
     {
         type: ['comedy'],
         name: 'Herbie - Meu Fusca Turbinado',
-        image: 'public/movies/images/herbie_meu_fusca_turbinado.jpg',
+        image: '/movies/images/herbie_meu_fusca_turbinado.jpg',
         comment: []
     }, 
 
     {
         type: ['romance', 'comedy'],
         name: 'Sorte no Amor',
-        image: 'public/movies/images/just_my_luck.jpg',
+        image: '/movies/images/just_my_luck.jpg',
         comment: []
     }, 
 
     {
         type: ['romance', 'comedy'],
         name: 'Legalmente Loira',
-        image: 'public/movies/images/legalmente_loira.jpg',
+        image: '/movies/images/legalmente_loira.jpg',
         comment: []
     }, 
 
     {
         type: ['comedy'],
         name: 'Meninas Malvadas',
-        image: 'public/movies/images/meninas_malvadas.jpg',
+        image: '/movies/images/meninas_malvadas.jpg',
         comment: []
     }, 
 
     {
         type: ['comedy'],
         name: 'O Amor É Cego',
-        image: 'public/movies/images/o_amor_e_cego.jpg',
+        image: '/movies/images/o_amor_e_cego.jpg',
         comment: []
     }, 
 
     {
         type: ['comedy', 'drama'],
         name: 'O Diabo Veste Prada',
-        image: 'public/movies/images/o_diabo_veste_prada.jpg',
+        image: '/movies/images/o_diabo_veste_prada.jpg',
         comment: []
     }, 
 
     {
         type: ['romance'],
         name: 'P.S. Eu Te Amo',
-        image: 'public/movies/images/P_s_i_love_you.jpg',
+        image: '/movies/images/P_s_i_love_you.jpg',
         comment: []
     }, 
 
     {
         type: ['romance'],
         name: 'Orgulho e Preconceito',
-        image: 'public/movies/images/Pride_and_Prejudice.jpg',
+        image: '/movies/images/Pride_and_Prejudice.jpg',
         comment: []
     }, 
 
     {
         type: ['comedy'],
         name: 'Sexta-Feira Muito Louca',
-        image: 'public/movies/images/sexta_feira_muito_louca.jpg',
+        image: '/movies/images/sexta_feira_muito_louca.jpg',
         comment: []
     }, 
 
     {
         type: ['comedy'],
         name: 'Superbad',
-        image: 'public/movies/images/super_bad.jpg',
+        image: '/movies/images/super_bad.jpg',
         comment: []
     },
 
     {
         type: ['romance', 'comedy'],
         name: 'A Proposta',
-        image: 'public/movies/images/The_Proposal.jpg',
+        image: '/movies/images/The_Proposal.jpg',
         comment: []
     },
 
     {
         type: ['romance', 'comedy'],
         name: 'Vestida para Casar',
-        image: 'public/movies/images/vestida_para_casar.jpg',
+        image: '/movies/images/vestida_para_casar.jpg',
         comment: []
     },
 ];
 
+export const Movie = {
+    getAll: (): Movie[] =>{
+        return data;
+    },
+    getType: (type: Genre): Movie[] =>{
+        //o filter vai gerar um novo array com o type escolhido
+        //includes verifica se contem o valor passado dentro do array genre
+        return data.filter(item => item.type.includes(type));
+    },
+    getName: (name: string): Movie[] => {
+        return data.filter(item => item.name.toLowerCase().includes(name.toLowerCase()));
+    }
+};

@@ -1,10 +1,16 @@
 {{>partials/header}}
 <main>
+    {{#list}}
         <div class="movie">
-            <img src="movies/images/de_repente_30.jpg" alt="" class="poster">
-            <h3>Título</h3>
+            
+
+            <img src="{{ image }}" alt="" class="poster">
+            <h3>{{ name }}</h3>
             <h4><a href="/comment" >comentários: X</a></h4>
+
+            
         </div>
+    {{/list}}
 
         
 
