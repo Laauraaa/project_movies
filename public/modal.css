@@ -31,7 +31,7 @@ dialog::backdrop{
 
 .getmovie{
     display: flex;
-    gap: 10px;
+    gap: 3px;
     margin-bottom: 15px;
 }
 
