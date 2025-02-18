@@ -17,6 +17,8 @@ server.use(express.static(path.join(__dirname, '../public')));
 //rotes
 server.use(mainRoutes);
 
+
+
 //notfound
 server.use((req,res) => {
     res.send('página não encontrada')
