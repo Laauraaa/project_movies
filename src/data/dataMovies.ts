@@ -5,14 +5,15 @@ type Movie = {
     comment: comment[]
 };
 
-type Genre = 'romance' | 'comedy' | 'drama' | 'other';
+export type Genre = 'romance' | 'comedy' | 'drama' | 'other';
+//type Genre = 'romance' | 'comedy' | 'drama' | 'other';
 
 type comment = {
     name: string,
     text: string
 };
 
-const data: Movie[] = [
+export const data: Movie[] = [
     {
         type: ['romance'],
         name: 'Quatro Amigas e um Jeans Viajante',
@@ -181,5 +182,9 @@ export const Movie = {
     },
     getName: (name: string): Movie[] => {
         return data.filter(item => item.name.toLowerCase().includes(name.toLowerCase()));
+    },
+    addMovie: (movie: Movie) => {
+        data.push(movie);
     }
 };
+

@@ -2,8 +2,8 @@
 
 <main>
             <div class="posterArea">
-                <img src="movies/images/de_repente_30.jpg" alt="" id="moviePosterArea">
-                <h3>Título</h3>
+                <img src="{{ movie.image }}" alt="" id="moviePosterArea">
+                <h3>{{ movie.name }}</h3>
             </div>
             <div class="comentArea">
                 <div class="addComent"> 
@@ -14,17 +14,17 @@
                 </div>
                 
                 <div class="areaComentMovie">
-
+                    {{ #movie.comment }}
                     <div class="comentMovie">
 
-                        <h5 id="nameComentMovie">nome</h5>
+                        <h5 id="nameComentMovie">{{ name }}</h5>
                         <h5 id="txtComentMovie">
-                            comentario comentário comentario comentário comentario comentário comentario comentário comentario comentário comentario comentário comentario comentário
+                            {{ text }}
                         </h5>
 
                     </div>
-
-                </div>
+                    {{ /movie.comment }}
+                </div> 
                 
             </div>
         </main>
