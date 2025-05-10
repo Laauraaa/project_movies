@@ -5,12 +5,12 @@
   "scripts": {
     "start-dev": "nodemon -e ts,json,mustache src/server.ts",
     "build": "tsc && npm run copy-files",
-    "copy-files": "npx copyfiles -u 1 src/views/**/* dist",
+    "copy-files": "copyfiles -u 1 src/views/**/* dist",
     "start": "node dist/server.js"
   },
   "render": {
-    "installCommand": "npm install --production=false"
-  },
+  "installCommand": "npm install --production=false"
+},
   "repository": {
     "type": "module",
     "url": "(https://github.com/Laauraaa/project_movies)"
@@ -32,3 +32,4 @@
     "copyfiles": "^2.4.1"
   }
 }
+
