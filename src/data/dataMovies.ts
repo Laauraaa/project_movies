@@ -6,7 +6,7 @@ type Movie = {
 };
 
 export type Genre = 'romance' | 'comedy' | 'drama' | 'other';
-//type Genre = 'romance' | 'comedy' | 'drama' | 'other';
+
 
 type comment = {
     name: string,
@@ -176,8 +176,6 @@ export const Movie = {
         return data;
     },
     getType: (type: Genre): Movie[] =>{
-        //o filter vai gerar um novo array com o type escolhido
-        //includes verifica se contem o valor passado dentro do array genre
         return data.filter(item => item.type.includes(type));
     },
     getName: (name: string): Movie[] => {

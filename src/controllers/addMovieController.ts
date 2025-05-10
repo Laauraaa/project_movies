@@ -17,15 +17,15 @@ export const addMovie = (req: Request, res: Response)  =>{
     const genres: Genre[] = (Array.isArray(genre) ? genre : [genre])
         .filter((g): g is Genre => validGenres.includes(g));
 
-    // Criando um novo objeto de filme
+ 
     const newMovie = {
         name, 
         type: genres,
         image,
-        comment: [...comment] // Garante que os comentários sejam adicionados corretamente
+        comment: [...comment] 
     };
 
-    // Adicionando o novo filme ao array `data`
+
     Movie.addMovie(newMovie);
     console.log(data);
     res.sendStatus(201);

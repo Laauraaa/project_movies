@@ -10,7 +10,7 @@
   header {
     top: 0;
     left: 0;
-    width: 100%; /* Faz o menu ocupar toda a largura */
+    width: 100%;
     z-index: 1000;
     position: fixed;
 
@@ -55,7 +55,7 @@ main{
     
     display: flex;
     justify-content: space-between; 
-    align-items: flex-start; /* Isso mantém os itens no topo */ 
+    align-items: flex-start;
     gap: 100px;
     margin-left: 200px;
     margin-right: 200px;
@@ -72,7 +72,7 @@ main{
 .posterArea{
 
         position: sticky;
-        top: 100px; /* Ajuste para a altura desejada */
+        top: 100px; 
 
 }
 .posterArea h3 {
@@ -158,7 +158,7 @@ main{
 
 footer {
     position: fixed;
-    width: 100%; /* Faz o menu ocupar toda a largura */
+    width: 100%; 
     z-index: 1000;
     bottom: 0;
 
@@ -167,8 +167,8 @@ footer {
     font-size: 20px;
     text-align: center;
     height: 60px;
-    display: flex; /* Habilita o uso de flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
+    display: flex; 
+    justify-content: center; 
     align-items: center; 
     border-radius: 30px 30px 0px 0px;
 }
