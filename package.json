@@ -5,7 +5,7 @@
   "scripts": {
     "start-dev": "nodemon -e ts,json,mustache src/server.ts",
     "build": "tsc && npm run copy-files",
-    "copy-files": "copyfiles -u 1 src/views/**/* dist",
+    "copy-files": "cp -r src/views dist/",
     "start": "node dist/server.js"
   },
   "render": {
